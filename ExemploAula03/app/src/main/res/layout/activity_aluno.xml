@@ -56,7 +56,7 @@
         android:textSize="24sp"/>
 
     <TextView
-        android:text="Matricula:"
+        android:text="Matrícula:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewCGU"
@@ -78,20 +78,6 @@
         android:layout_marginStart="13dp"
         android:id="@+id/editTextNome"
         android:hint= "Coloque seu Nome aqui"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editTextMatricula"
-        android:layout_alignBaseline="@+id/textViewMatricula"
-        android:layout_alignBottom="@+id/textViewMatricula"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="11dp"
-        android:layout_marginEnd="11dp"
-        android:hint= "Coloque sua matricula aqui"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -120,10 +106,47 @@
         android:text="Salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/buttonNovo"
+        android:id="@+id/buttonSalvar"
+        android:onClick="Salvar"
+        android:layout_alignBaseline="@+id/buttonNovo"
+        android:layout_alignBottom="@+id/buttonNovo"
+        android:layout_alignLeft="@+id/editTextCGU"
+        android:layout_alignStart="@+id/editTextCGU" />
+
+    <Button
+        android:text="Listar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonListar"
+        android:layout_alignBaseline="@+id/buttonSalvar"
+        android:layout_alignBottom="@+id/buttonSalvar"
+        android:layout_toRightOf="@+id/buttonSalvar"
+        android:layout_toEndOf="@+id/buttonSalvar"
+        android:onClick="Lista"/>
+
+    <Button
+        android:text="Excluir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonExcluir"
+        android:onClick="Excluir"
+        android:layout_alignBaseline="@+id/buttonListar"
+        android:layout_alignBottom="@+id/buttonListar"
+        android:layout_toRightOf="@+id/buttonListar"
+        android:layout_toEndOf="@+id/buttonListar" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextMatricula"
+        android:hint= "Coloque sua matricula aqui"
+        android:layout_alignBaseline="@+id/textViewMatricula"
+        android:layout_alignBottom="@+id/textViewMatricula"
         android:layout_toRightOf="@+id/textViewMatricula"
         android:layout_toEndOf="@+id/textViewMatricula"
-        android:id="@+id/buttonSalvar"
-        android:onClick="Salvar"/>
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
 
 </RelativeLayout>
