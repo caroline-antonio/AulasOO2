@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Aula07TrataErros</string>
+    <string name="trataErro">Ocorreu um erro inesperado!</string>
+</resources>
