@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CorrecaoProva</string>
+    <string name="et_fullname">Nome Completo</string>
+    <string name="lbl_fullname">Informe seu nome completo</string>
+    <string name="bt_enviar">enviar</string>
+</resources>

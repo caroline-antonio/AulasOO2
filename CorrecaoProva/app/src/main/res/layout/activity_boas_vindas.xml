@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.android.carol.correcaoprova.activities.BoasVindasActivity">
+
+    <TextView
+        android:id="@+id/tvGlobinho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13pt"
+        />
+
+    <EditText
+        android:id="@+id/edt_text_destino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:textSize="13pt"
+        android:hint="Informe o destino"
+        android:layout_below="@+id/edt_text_quilometragem"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/edt_text_quilometragem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13pt"
+        android:hint="Informe a quilometragem"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp" />
+
+    <EditText
+        android:id="@+id/edt_text_consumo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13pt"
+        android:hint="Informe o consumo (litros)"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/edt_text_destino"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+        <Button
+            android:id="@+id/botao_salvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar" />
+
+        <Button
+            android:id="@+id/botao_listar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listar" />
+
+        <Button
+            android:id="@+id/botao_calcular_consumo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular Consumo"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
