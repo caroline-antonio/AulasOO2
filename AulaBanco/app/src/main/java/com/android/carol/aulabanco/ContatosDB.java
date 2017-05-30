@@ -54,4 +54,53 @@ public class ContatosDB {
         return list;
     }
 
+    public List<Contatos> Buscar(String nome){
+        List <Contatos> list = new ArrayList<>();
+
+        String[] colunas = new String []{"_id", "nome", "telefone"};
+        String where = "nome=?";
+        String[] argumentos = new String[]{nome};
+
+        Cursor cursor = sqLiteDB.query("contatos", colunas, where, argumentos, null, null, "nome ASC");
+
+        if (cursor.getCount()>0){
+            cursor.moveToFirst();
+
+            do {
+                Contatos contato = new Contatos();
+                contato.set_id(cursor.getInt(cursor.getColumnIndex("_id")));
+                contato.setNome(cursor.getString(cursor.getColumnIndex("nome")));
+                contato.setTelefone(cursor.getString(cursor.getColumnIndex("telefone")));
+                list.add(contato);
+            }while (cursor.moveToNext());
+
+        }
+
+        return list;
+    }
+
+    public void atualizar(Contatos contatos) throws Exception{
+
+        String where = "_id=?";
+        String[] argumentos = new String[]{""+contatos.get_id()};
+
+        ContentValues valores = new ContentValues();
+        valores.put("nome", contatos.getNome());
+        valores.put("telefone", contatos.getTelefone());
+
+        sqLiteDB.update("contatos", valores, where, argumentos);
+    }
+
+    public void deletar (Contatos contatos) throws Exception{
+
+        String where = "_id=?";
+        String[] argumentos = new String[]{""+contatos.get_id()};
+        sqLiteDB.delete("contatos", where, argumentos);
+
+    }
+
+
+
+
+
 }

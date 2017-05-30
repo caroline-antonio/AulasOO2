@@ -35,29 +35,46 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:id="@+id/btnInserir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inserir"
-        android:layout_marginTop="19dp"
-        android:onClick="Inserir"
+        android:text="Novo"
+        android:id="@+id/buttonNovo"
         android:layout_below="@+id/edtTelefone"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="28dp"
-        android:layout_marginStart="28dp" />
+        android:layout_marginTop="47dp"
+        android:onClick="Novo"/>
 
     <Button
-        android:id="@+id/btnListar"
+        android:id="@+id/buttonSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:onClick="Salvar"
+        android:layout_alignBaseline="@+id/buttonNovo"
+        android:layout_alignBottom="@+id/buttonNovo"
+        android:layout_toRightOf="@+id/buttonNovo"
+        android:layout_toEndOf="@+id/buttonNovo" />
+
+    <Button
+        android:id="@+id/buttonListar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Listar"
-        android:layout_alignBaseline="@+id/btnInserir"
-        android:layout_alignBottom="@+id/btnInserir"
-        android:layout_toRightOf="@+id/btnInserir"
-        android:layout_toEndOf="@+id/btnInserir"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp"
-        android:onClick="Listar"/>
+        android:onClick="Listar"
+        android:layout_alignBaseline="@+id/buttonSalvar"
+        android:layout_alignBottom="@+id/buttonSalvar"
+        android:layout_toRightOf="@+id/buttonSalvar"
+        android:layout_toEndOf="@+id/buttonSalvar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:id="@+id/buttonExcluir"
+        android:layout_alignTop="@+id/buttonListar"
+        android:layout_toRightOf="@+id/buttonListar"
+        android:layout_toEndOf="@+id/buttonListar"
+        android:onClick="Excluir"/>
 
 </RelativeLayout>
